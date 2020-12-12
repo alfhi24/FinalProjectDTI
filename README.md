@@ -2,7 +2,7 @@
 
 ## Racism Detection
 
-Indonesian tweets dataset for this task : 
+Indonesian tweets dataset for racism detection : 
 https://raw.githubusercontent.com/asthala/racism-detection/master/datasetfix.csv
 
 `pip install flask` <br>
