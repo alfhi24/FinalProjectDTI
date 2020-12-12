@@ -5,5 +5,5 @@
 Indonesian tweets dataset for this task : 
 https://raw.githubusercontent.com/asthala/racism-detection/master/datasetfix.csv
 
-Depoyment using Flask
+Deployment using Flask
 `pip install flask`
