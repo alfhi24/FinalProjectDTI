@@ -15,7 +15,6 @@ nltk.download('punkt')
 nltk.download('stopwords')
 
 app = Flask(__name__)
-model = pickle.load(open('model.pkl', 'rb'))
 
 
 def clean(data):
@@ -45,9 +44,6 @@ def stem(data):
   stemmer = factory.create_stemmer()
   return data.apply(lambda x: [ stemmer.stem(item) for item in x])
 
-# def tf_idf(data):
-#   vectorizer = TfidfVectorizer()
-#   return vectorizer, vectorizer.fit_transform(data)
 
 df_clean = pd.read_csv('data_clean.csv')
 def tf_idf(data):
@@ -57,6 +53,8 @@ df_clean['tweets'] = df_clean['tweets'].apply(lambda x: " ".join(x) if isinstanc
 vec,x = tf_idf(df_clean['tweets'])
 label = np.array(df_clean['label'].values)
 
+model_mlp_so = pickle.load(open('model_mlp_so.pkl', 'rb'))
+
 @app.route('/')
 def home():
     return render_template('index.html')
@@ -64,9 +62,8 @@ def home():
 @app.route('/predict',methods=['POST'])
 def predict():
 
-
-    # sentence = "Kamu jahat kaya cina komunis" #@param
-    sentence = str(request.form.values())
+    model = pickle.load(open('model_mlp_so.pkl', 'rb'))
+    sentence = request.form.values()
     sentence = [sentence]
     sentence = pd.DataFrame(data=sentence,columns=['text'], index=[0])
     sentence['text'] = clean(sentence['text'])
