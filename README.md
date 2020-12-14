@@ -14,8 +14,8 @@ This how the dataset looks like in wordcloud :
 
 
 ## How to use
-install all requirements `pip install -r requirements.txt` <br>
-
-run app `python app.py`
+- Make sure you already have python and pip installed on your computer
+- Install all requirements `pip install -r requirements.txt`
+- Run app `python app.py`
 
 
