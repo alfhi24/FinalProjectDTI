@@ -17,5 +17,5 @@ This how the dataset looks like in wordcloud :
 - Make sure you already have python and pip installed on your computer
 - Install all requirements `pip install -r requirements.txt`
 - Run app `python app.py`
-
+- Go to your browser and run `127.0.0.1:5000`
 
