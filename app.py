@@ -53,7 +53,7 @@ df_clean['tweets'] = df_clean['tweets'].apply(lambda x: " ".join(x) if isinstanc
 vec,x = tf_idf(df_clean['tweets'])
 label = np.array(df_clean['label'].values)
 
-model_mlp_so = pickle.load(open('model_mlp_so.pkl', 'rb'))
+model = pickle.load(open('model_mlp.pkl', 'rb'))
 
 @app.route('/')
 def home():
@@ -62,7 +62,7 @@ def home():
 @app.route('/predict',methods=['POST'])
 def predict():
 
-    model = pickle.load(open('model_mlp_so.pkl', 'rb'))
+    model = pickle.load(open('model_mlp.pkl', 'rb'))
     sentence = request.form.values()
     sentence = [sentence]
     sentence = pd.DataFrame(data=sentence,columns=['text'], index=[0])
