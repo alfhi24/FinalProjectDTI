@@ -12,6 +12,7 @@ This how the dataset looks like in wordcloud :
 ## Flowchart
 ![Flowchart](https://github.com/alfhi24/FinalProjectDTI/blob/main/flowchart.png)
 
+## Model and Evaluation
 
 ## How to use
 - Make sure you already have python and pip installed on your computer
