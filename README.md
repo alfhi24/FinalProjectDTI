@@ -25,7 +25,7 @@ Text data needs to be cleaned and encoded to numerical values before giving them
 - TF-IDF: aims to give weight to the terms of the dataset
 - SMOTE Oversampling: aims to balance data classes
 
-## Model and Evaluation
+## Model
 The model is build using the Multi Layer Perceptron or MLP architecture. The activation function that will be used for hidden neurons is the Rectified Linear Unit (ReLU).
 ![Model Illustration](https://media.geeksforgeeks.org/wp-content/uploads/20190410161828/newContent12.png)
 
